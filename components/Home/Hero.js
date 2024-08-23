@@ -64,7 +64,7 @@ const Hero = () => {
 					alt="hero passport"
 					width={500}
 					height={500}
-					// style={{ objectFit: 'cover' }}
+					// style={{ objectFit: 'cover'' }}
 					// fill
 				/>
 			</div>
