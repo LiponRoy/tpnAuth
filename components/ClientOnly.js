@@ -1,22 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-const ClientOnly = ({
-    children
-}) => {
-    const [hasMounted, setHasMounted] = useState(false);
+const ClientOnly = ({ children }) => {
+	const [hasMounted, setHasMounted] = useState(false);
 
-    useEffect(() => {
-        setHasMounted(true);
-    }, [])
+	useEffect(() => {
+		setHasMounted(true);
+	}, []);
 
-    if (!hasMounted) return null;
+	if (!hasMounted) return null;
 
-    return (
-        <>
-            {children}
-        </>
-    );
+	return <>{children}</>;
 };
 
 export default ClientOnly;
