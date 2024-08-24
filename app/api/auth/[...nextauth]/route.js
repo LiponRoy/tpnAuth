@@ -34,18 +34,13 @@ export const authOptions = {
 			},
 		}),
 	],
-	callbacks: {
-		async redirect({ url, baseUrl }) {
-			// Default behavior redirects to the base URL
-			return url.startsWith(baseUrl) ? url : baseUrl;
-		},
-	},
+
 	session: {
 		strategy: 'jwt',
 	},
 	secret: process.env.NEXTAUTH_SECRET,
 	pages: {
-		signIn: '/login',
+		signIn: '/dashboard',
 	},
 };
 
