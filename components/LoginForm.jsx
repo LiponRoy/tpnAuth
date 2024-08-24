@@ -18,15 +18,11 @@ export default function LoginForm() {
 		e.preventDefault();
 		try {
 			setLoading(true);
-			const res = await signIn(
-				'credentials',
-				{
-					email,
-					password,
-					redirect: false,
-				},
-				{ callbackUrl: '/dashboard' }
-			);
+			const res = await signIn('credentials', {
+				email,
+				password,
+				redirect: false,
+			});
 
 			if (res.error) {
 				setError('Invalid Credentials');
