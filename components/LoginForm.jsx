@@ -29,7 +29,7 @@ export default function LoginForm() {
 				setLoading(false);
 				return;
 			}
-			router.push('/dashboard');
+			router.replace('dashboard');
 			setLoading(false);
 		} catch (error) {
 			console.log(error);
