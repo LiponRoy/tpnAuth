@@ -15,10 +15,13 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<ClientOnly>
-					<Navbar />
-				</ClientOnly>
-				<AuthProvider>{children}</AuthProvider>
+				<AuthProvider>
+					<ClientOnly>
+						<Navbar />
+					</ClientOnly>
+
+					{children}
+				</AuthProvider>
 			</body>
 		</html>
 	);
